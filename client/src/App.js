@@ -1,20 +1,35 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import AppBar from 'material-ui/AppBar';
 import logo from './logo.svg';
 import './App.css';
-import Test from './containers/Test'
+import Examples from './Examples/Examples';
+import BtnNav from './BottomNav/BtnNav';
+import SearchPage from './BottomNav/SearchPage';
+import ProfilePage from './BottomNav/ProfilePage';
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Test/>
-      </div>
+      <Router>
+        <div className="App">
+          <MuiThemeProvider>
+            <AppBar
+              title="Example"
+              iconClassNameRight="muidocs-icon-navigation-expand-more"
+            />
+              <Switch>
+                <Route exact path="/" component={Examples} />
+                <Route exact path="/search" component={SearchPage} />
+                <Route exact path="/profile" component={ProfilePage} />
+              </Switch>
+            <BtnNav/>
+          </MuiThemeProvider>
+        </div>
+      </Router>
     );
   }
 }

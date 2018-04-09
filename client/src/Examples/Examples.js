@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Examples.css'
 
 class Examples extends Component {
 	constructor(props) {
@@ -9,7 +10,7 @@ class Examples extends Component {
 	}
 
 	componentDidMount() {
-		fetch('/api/list?format=json')
+		fetch('/api/list')
 			.then(res => res.json())
 			.then(examples => this.setState({examples}, () => console.log('Examples fetched..', examples)));
 	}
@@ -20,9 +21,8 @@ class Examples extends Component {
         <p>Start Your WebApp Project More Easier</p>
         <ul>
         	{this.state.examples.map(example => 
-        		<li key={example.id}>
-                <img className="image" src={example.img} alt=""/>
-                <p>{example.text}</p>
+        		<li>
+                <img className="image" src={example.img} alt="{example.id}"/>
         		</li>
         	)}
         </ul>
