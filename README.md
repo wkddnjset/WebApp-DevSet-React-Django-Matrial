@@ -19,3 +19,11 @@ Mac:client $ npm insatll
 Mac:React-Express-Dev-Setting $ npm run dev
 ```
 
+## When yon run
+- Display in Devices
+
+<img src="https://github.com/wkddnjset/WebApp-DevSet-React-Express-Matrial/blob/master/git_img/in_app.png" width="500px">
+
+- Display in PC
+
+<img src="https://github.com/wkddnjset/WebApp-DevSet-React-Express-Matrial/blob/master/git_img/in_web.png" width="500px">
