@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+bin
+include
+lib
+.Python
+pip-selfcheck.json
+server/db.sqlite3
+project/__pycache__
+api/__pycache__
+api/migrations
