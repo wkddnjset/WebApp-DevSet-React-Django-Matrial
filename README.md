@@ -7,16 +7,34 @@
 Mac:Desktop $ git clone https://github.com/wkddnjset/React-Express-Dev-Setting
 ```
 
-- install node modules
+- create virtualenv for django
 ```bash
-Mac:React-Express-Dev-Setting $ npm insatll
+Mac:WebApp-DevSet-React-Django-Matrial $ sudo pip install virtualenv
+Mac:WebApp-DevSet-React-Django-Matrial $ virtualenv -p python3 venv_for_django // for python version 3
+```
+
+- install python library
+```bash
+Mac:WebApp-DevSet-React-Django-Matrial $ cd server
+Mac:server $ sudo pip install -r requirements.txt
+```
+
+- run django server
+```bash
+Mac:server $ python manage.py runserver
+Starting development server at http://127.0.0.1:8000/
+```
+
+- install modules for react
+```bash
 Mac:React-Express-Dev-Setting $ cd client
 Mac:client $ npm insatll
 ```
 
-- run project
+- run react client
 ```bash
-Mac:React-Express-Dev-Setting $ npm run dev
+Mac:client $ npm start
+Starting development client at http://127.0.0.1:3000/
 ```
 
 ## When yon run
